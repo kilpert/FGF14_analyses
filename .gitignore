@@ -1,0 +1,4 @@
+.snakemake/
+results*/
+example/
+Rplots.pdf

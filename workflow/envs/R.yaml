@@ -1,0 +1,9 @@
+channels:
+  - agbiome
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-readr =2.1.4
+  - r-tidyverse =2.0.0
+  - r-ggplot2 =3.4.2
+  - r-scales =1.2.1

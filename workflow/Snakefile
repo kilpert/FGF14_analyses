@@ -1,0 +1,355 @@
+import glob
+from itertools import chain
+import json
+import os
+import pandas as pd
+import re
+from Bio.Seq import Seq
+import yaml
+
+
+## 1st level of config variable definition: config.yaml ################################################################
+try:
+    configfile: "config/config.yaml"
+except:
+    pass
+
+
+## 2nd level of config variable definition: snakemake command line args (overwrites previous definitions) ##############
+
+
+## 3rd level of config variable definition: Snakefile (overwrites previous definitions) ################################
+
+include: "rules/variables.smk"
+
+
+## config ##############################################################################################################
+
+try:
+    results = config["results"]
+except:
+    results = "results"
+
+
+try:
+    config['seed']
+except:
+    config['seed'] = 12345
+
+
+try:
+    config["downsample_n"]
+except:
+    config["downsample_n"] = None
+
+
+try:
+    config["bbduk"]
+except:
+    config["bbduk"] = None
+
+
+try:
+    config["reverse_complement"]
+except:
+    config["reverse_complement"] = False
+
+
+try:
+    config["filter_repeats"]
+except:
+    config["filter_repeats"] = []
+
+
+try:
+    config["repeat_region_spanning"]["agrep_mismatches"]
+except:
+    config["repeat_region_spanning"]["agrep_mismatches"] = 0
+
+
+## reverse complement of filter_repeats, motifs, and motif_colors
+
+def reverse_complement(seq_list):
+    new = []
+    for s in seq_list:
+        if s == "other":
+            new.append(s)
+        elif s.endswith("_absent"):
+            new.append(str(Seq(s.replace("_absent", "")).reverse_complement()+"_absent"))
+        else:
+            new.append(str(Seq(s).reverse_complement()))
+    return new
+
+
+if config["reverse_complement"] and config["filter_repeats"]:
+    config["filter_repeats"] = reverse_complement(config["filter_repeats"])
+filter_repeats = config["filter_repeats"]
+
+
+if config["reverse_complement"] and config["motifs"]:
+    config["motifs"] = reverse_complement(config["motifs"])
+motifs = config["motifs"]
+
+
+def dict_keys_reverse_complement(d):
+    new = {}
+    for k, v in d.items():
+        new[reverse_complement([k])[0]] = v
+    return new
+
+
+if config["reverse_complement"] and config["motif_colors"]:
+    config["motif_colors"] = dict_keys_reverse_complement(config["motif_colors"])
+
+
+if "alleles_yaml" in config:
+    try:
+        with open(config["alleles_yaml"], 'r') as f:
+            config["alleles"] = yaml.safe_load(f)
+            print("{:#^60}".format(" Alleles (YAML) "))
+            ##print(json.dumps(config["alleles"], indent=4))
+            print("Samples in alleles YAML:", list(config["alleles"].keys()), len(config["alleles"].keys()))
+
+            config["alleles"] = dict((k, config["alleles"][k]) for k in config["alleles"] if k in samples) # filter by samples
+    except:
+        pass
+
+
+if verbose:
+    print("{:#^60}".format(" Config "))
+    print(json.dumps(config, sort_keys=True, indent=4))
+
+
+## constraints #########################################################################################################
+
+wildcard_constraints:
+    sample = "[a-zA-Z0-9_-]+",
+    filter_repeats = "\w+",
+    n = "\d+",
+    orientation="FF|FR|RF|RR"
+
+
+## include #############################################################################################################
+
+include: "rules/input.smk"
+include: "rules/filtering.smk"
+include: "rules/repeat_region_spanning.smk"
+include: "rules/alleles.smk"
+include: "rules/read_orientation.smk"
+
+
+
+## Workflow targets ####################################################################################################
+
+
+def reverse_complement_indicator_file(reverse_complement):
+    if reverse_complement:
+        return expand("{results}/{ref}/repeat_region_spanning/no_flanking/REVERSE_COMPLEMENT.txt",
+            results=results,
+            ref=refs,
+            sample=samples,
+        )
+    else:
+        return []
+
+
+def run_alleles():
+    if "alleles_yaml" in config:
+    
+        return [
+
+            expand("{results}/{ref}/repeat_region_spanning/no_flanking/alleles/{sample}",
+                results=results,
+                ref=refs,
+                sample=samples,
+            ), # separate fastq by alleles
+
+            expand("{results}/{ref}/repeat_region_spanning/no_flanking/alleles/n_alleles/{sample}.n_alleles.tsv",
+                results=results,
+                ref=refs,
+                sample=samples,
+            ), # count reads per allele
+
+            expand("{results}/{ref}/repeat_region_spanning/no_flanking/alleles/alleles_motif_positions/{sample}",
+                results=results,
+                ref=refs,
+                sample=samples,
+            ), # calculate motif positions
+
+            expand("{results}/{ref}/repeat_region_spanning/no_flanking/alleles/alleles_motif_positions_plot/{sample}.motif_positions.png",
+                results=results,
+                ref=refs,
+                sample=samples,
+            ), # plots
+        
+        ]
+    else:
+        return []
+
+
+## add files here!!!
+workflow_targets = [
+
+    ## input ##
+
+    ## symlink or downsample
+    expand("{results}/{ref}/input/{sample}.fastq.gz",
+        results=results,
+        ref=refs,
+        sample=samples,
+    ),
+
+    expand("{results}/{ref}/input/fastqc/{sample}_fastqc.html",
+        results=results,
+        ref=refs,
+        sample=samples,
+    ),
+
+    expand("{results}/{ref}/input/fastq_read_phred/{sample}.fastq_read_phred.html",
+        results=results,
+        ref=refs,
+        sample=samples,
+    ),
+
+    ## trimming ##
+    expand("{results}/{ref}/filtering/bbduk/{sample}.fastq.gz",
+        results=results,
+        ref=refs,
+        sample=samples,
+    ),
+
+    expand("{results}/{ref}/filtering/bbduk/fastqc/{sample}_fastqc.html",
+        results=results,
+        ref=refs,
+        sample=samples,
+    ),
+
+   
+    ####################################################################################################################
+    ## read orientation (by flanking region)
+    ####################################################################################################################
+
+    expand("{results}/{ref}/read_orientation/by_flanking_regions/flanking_regions_orientation.tsv",
+        results=results,
+        ref=refs,
+        sample=samples,
+    ),
+
+    ## motif orientations
+    expand("{results}/{ref}/read_orientation/by_motif/motif_orientation.tsv",
+        results=results,
+        ref=refs,
+    ),
+
+    ####################################################################################################################
+    ## repeat_region_spanning ##
+    ####################################################################################################################
+
+    expand("{results}/{ref}/repeat_region_spanning/flanking_regions.info.txt",
+        results=results,
+        ref=refs,
+    ), # txt file with info on flanking regions
+
+    ## orientation specific ##
+
+    expand("{results}/{ref}/repeat_region_spanning/orientation/{orientation}/{sample}.{orientation}.repeat_region_spanning.fastq.gz",
+        results=results,
+        ref=refs,
+        sample=samples,
+        orientation=orientations,
+    ), # filter for different orientations of flanking regions (FF, RR)
+
+    expand("{results}/{ref}/repeat_region_spanning/orientation/blacklist/{sample}.blacklist.txt",
+        results=results,
+        ref=refs,
+        sample=samples,
+    ), # blacklist reads with other combinations of orientations
+
+    expand("{results}/{ref}/repeat_region_spanning/orientation/{orientation}/bbduk/{sample}.bbduk.fastq.gz",
+        results=results,
+        ref=refs,
+        orientation=["FF", "RR"],
+        sample=samples,
+    ), # trim flanking regions using bbduk and cutadapt
+
+    expand("{results}/{ref}/repeat_region_spanning/no_flanking/{sample}.no_flanking.fastq.gz",
+        results=results,
+        ref=refs,
+        sample=samples,
+    ), # reads without flanking regions!
+
+    reverse_complement_indicator_file(config["reverse_complement"]),
+
+    ## filter for specific repeats
+    expand("{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/{sample}.fastq.gz",
+        results=results,
+        ref=refs,
+        filter_repeats=filter_repeats,
+        sample=samples,
+    ), # read with multiple (2x) reapeats, e.g. AAGAAG
+
+    expand("{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/repeat_stats/{sample}.repeat_stats.tsv",
+        results=results,
+        ref=refs,
+        filter_repeats=filter_repeats,
+        sample=samples,
+    ),
+
+    expand("{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/repeat_stats/html/{sample}.repeat_stats.html",
+        results=results,
+        ref=refs,
+        filter_repeats=filter_repeats,
+        sample=samples,
+    ),
+
+    ## motif positions ##
+
+    expand("{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/motif_positions/{sample}.motif_positions.tsv",
+        results=results,
+        ref=refs,
+        filter_repeats=filter_repeats,
+        sample=samples,
+    ), # motif positions for every read
+
+    expand("{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/motif_positions/mean_motif_length_from_position/mean_motif_length_from_position.html",
+        results=results,
+        ref=refs,
+        filter_repeats=filter_repeats,
+    ),
+
+    expand("{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/motif_positions/png_horizontal/{sample}.motif_positions_barplot.png",
+        results=results,
+        ref=refs,
+        filter_repeats=filter_repeats,
+        sample=samples,
+    ), # horizontal bars plot
+
+    expand("{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/repeat_stats/density_plot/{sample}.density_plot.png",
+        results=results,
+        ref=refs,
+        filter_repeats=filter_repeats,
+        sample=samples,
+    ), # density_plot plot
+
+ 
+    ## Alleles (filter by alleles)
+     run_alleles(),
+
+]
+workflow_targets = list(chain.from_iterable(workflow_targets)) # flatten list of lists (optional)
+
+if verbose:
+    print("{:#^60}".format(" Workflow targets "))
+    print(workflow_targets, len(workflow_targets))
+
+
+## rule all ############################################################################################################
+if verbose:
+    print("{:#^60}".format(" Workflow "))
+
+
+rule all:
+    input:
+        workflow_targets
+    default_target: True
+

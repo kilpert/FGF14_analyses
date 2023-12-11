@@ -1,0 +1,7 @@
+channels:
+  ##- agbiome
+  - conda-forge
+  - bioconda
+dependencies:
+  - bbmap =39.01
+  - python

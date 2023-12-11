@@ -1,0 +1,13 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - jupyter =1.0.0
+  - plotly =5.8.2
+  - pandas =1.4.2
+  - python-kaleido =0.2.1
+  - pyyaml =6.0
+  - tabulate =0.9.0
+  - scipy =1.9.3
+  - regex =2023.5.5
+  - bash =5.2.15

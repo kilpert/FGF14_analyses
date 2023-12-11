@@ -1,0 +1,55 @@
+########################################################################################################################
+## run012_20231107_FGF14
+########################################################################################################################
+
+fastq_dir: ../FGF14_basecalling/results/ont-guppy_6.4.6/run012_20231107_FGF14/dna_r9.4.1_450bps_fast/fastq/
+## results: results
+
+whitelist:
+  - FGF14_00001
+  - FGF14_00002
+  
+motifs:
+  - AAG
+  - GAG
+  - AGG
+  - ACG
+  - AAC
+
+filter_repeats:
+  - AAGAAG
+  - AAGAAG_absent
+
+## reverse_complement: True # FGF14 on -strand!
+
+flanking_region:
+  upstream:   ATATCAATATTCTCTATGCAACCAA # 25 bp
+  downstream: TAGAAATGTGTTTAAGAATTCCTCA # 25 bps
+
+motif_colors:
+  AAG: "#5ca2d5"
+  GAG: "yellow"
+  AGG: "red"
+  ACG: "brown"
+  AAC: "pink"
+  other: "black"
+
+alleles_yaml: resources/alleles/FGF14.alleles.yaml
+
+
+
+## general
+
+verbose: True
+
+
+## tools
+
+fastqc:
+  adapters: resources/ont/ont_adapters.fastqc.tsv
+
+bbduk: -Xmx2g qin=33 minlen=200 qtrim=lr trimq=10 maq=10 maxlen=100000
+
+repeat_region_spanning:
+  edit_distance: 2
+

@@ -1,0 +1,27 @@
+FGF14_00001:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read:
+      maxlen: 199
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read:
+      minlen: 200
+FGF14_00002:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+    read:
+      maxlen: 249
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+    read:
+      minlen: 250
+

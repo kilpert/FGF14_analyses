@@ -34,7 +34,7 @@ except:
 try:
     config['seed']
 except:
-    config['seed'] = 12345
+    config['seed'] = 123
 
 
 try:

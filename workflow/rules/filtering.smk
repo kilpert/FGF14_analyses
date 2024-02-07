@@ -13,6 +13,7 @@ rule bbduk_filtering:
         "../envs/bbmap.yaml"
     shell:
         "bbduk.sh "
+        "ordered "
         "{params.extra} "
         "in={input} "
         "out={output} "

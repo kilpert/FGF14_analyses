@@ -63,6 +63,7 @@ rule filter_spanning_by_orientation:
     shell:
         ## upstream
         "bbduk.sh "
+        "ordered "
         "{params.extra} "
         "k={params.k_upstream} "
         "edist={params.mismatches} "
@@ -72,6 +73,7 @@ rule filter_spanning_by_orientation:
         "2>{log} "
         ## downstream
         "| bbduk.sh "
+        "ordered "
         "{params.extra} "
         "k={params.k_downstream} "
         "edist={params.mismatches} "
@@ -225,6 +227,7 @@ rule repeat_region_spanning_filter_repeats2:
         4
     shell:
         "bbduk.sh "
+        "ordered "
         "t={threads} "
         "{params.extra} "
         "k={params.k} "

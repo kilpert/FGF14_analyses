@@ -25,12 +25,14 @@ try:
     config = json.loads(sys.argv[1])
     infile = sys.argv[2]
     subsample_n = int(sys.argv[3])
-    outfile = sys.argv[4]
+    outfile_png = sys.argv[4]
+    outfile_tsv = sys.argv[5]
 except:
     config = None
     infile = sys.argv[1]
     subsample_n = int(sys.argv[2])
-    outfile = sys.argv[3]
+    outfile_png = sys.argv[3]
+    outfile_tsv = sys.argv[4]
 ## print(config)
 ## print(infile)
 ## print(subsample_n)
@@ -83,6 +85,11 @@ df = df[df['read'].isin(subsampled_read_names)]
 ##print(tabulate(df, headers='keys'))
 print(df)
 print(df.shape)
+
+
+## output downsampled (for paper)
+df.to_csv(outfile_tsv, sep="\t", index=False)
+
 
 print("{:#^60}".format(" n_reads "))
 n_reads = len(df["read"].unique())
@@ -216,7 +223,7 @@ fig.update_layout(
 ##fig.show()
 
 ## png
-fig.write_image(os.path.splitext(outfile)[0]+".png")
+fig.write_image(outfile_png)
 # fig.write_image(outfile)
 
 # ## html
@@ -235,5 +242,5 @@ fig.write_image(os.path.splitext(outfile)[0]+".png")
 
 
 print("{:#^60}".format(f" Outfile "))
-print(f"{outfile}\n")
+print(f"{outfile_png}\n")
 

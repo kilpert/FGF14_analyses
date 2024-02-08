@@ -32,6 +32,12 @@ print("{:#^60}".format(f" Config "))
 print(json.dumps(config, indent=4))
 
 
+## config to json (for paper)
+outfile_json = f"{os.path.splitext(outfile)[0]}.json"
+with open(outfile_json, "w") as f:
+    f.write(json.dumps(config))
+
+
 try:
     user_colors_dict = config["colors"]
 except:
@@ -188,6 +194,11 @@ def get_dict_of_df_subsampled(d_df, n_subsample=100, seed=123):
         print(df)
         print("n_reads:", len(df["read"].unique().tolist()))
         ##print(df.shape)
+
+        ## outfile_tsv (for paper)
+        outfile_tsv = f"{os.path.join(os.path.dirname(outfile), os.path.basename(outfile).split('.')[0])}.{allele}.motif_positions.tsv"
+        print(outfile_tsv)
+        df.to_csv(outfile_tsv, sep="\t", index=False)
 
         d_df_subsampled[allele] = df
 

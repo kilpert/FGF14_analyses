@@ -317,7 +317,7 @@ rule repeat_region_spanning_motif_positions_barplot_horizontal:
     output:
         "{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/motif_positions/png_horizontal/{sample}.motif_positions_barplot.png"
     params:
-        subsample_n=500,
+        subsample_n=300,
         motif_colors=json.dumps({"colors":config["motif_colors"]})
     log:
         "{results}/{ref}/log/repeat_region_spanning_motif_positions_barplot_horizontal.{filter_repeats}.{sample}.log"

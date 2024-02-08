@@ -315,7 +315,8 @@ rule repeat_region_spanning_motif_positions_barplot_horizontal:
     input:
         "{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/motif_positions/{sample}.motif_positions.tsv"
     output:
-        "{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/motif_positions/png_horizontal/{sample}.motif_positions_barplot.png"
+        png="{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/motif_positions/png_horizontal/{sample}.motif_positions_barplot.png",
+        tsv="{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/motif_positions/png_horizontal/{sample}.motif_positions_barplot.tsv"
     params:
         subsample_n=300,
         motif_colors=json.dumps({"colors":config["motif_colors"]})
@@ -330,7 +331,8 @@ rule repeat_region_spanning_motif_positions_barplot_horizontal:
         "'{params.motif_colors}' "
         "{input} "
         "{params.subsample_n} "
-        "{output} "
+        "{output.png} "
+        "{output.tsv} "
         ">{log} 2>&1 "
         "&& touch {output} "
 

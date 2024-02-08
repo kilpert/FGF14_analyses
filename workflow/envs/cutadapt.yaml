@@ -5,3 +5,4 @@ channels:
 dependencies:
   - bbmap =39.01
   - cutadapt =4.4
+  - pigz =2.8

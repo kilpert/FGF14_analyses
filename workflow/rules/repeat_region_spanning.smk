@@ -48,6 +48,7 @@ rule filter_spanning_by_orientation:
         orientation_upstream=orientation_upstream,
         orientation_downstream=orientation_downstream,
         mismatches=config["repeat_region_spanning"]["edit_distance"],
+        default=config["bbduk"]["default"] if config["bbduk"]["default"] else "",
         extra="mm=f rcomp=f",
         ##k=max(len(config["flanking_region"]["upstream"]),len(config["flanking_region"]["downstream"]))
         k_upstream=len(config["flanking_region"]["upstream"]),
@@ -62,8 +63,8 @@ rule filter_spanning_by_orientation:
         4
     shell:
         ## upstream
-        "bbduk.sh "
-        "ordered "
+        "bbduk.sh ordered=t "
+        "{params.default} "
         "{params.extra} "
         "k={params.k_upstream} "
         "edist={params.mismatches} "
@@ -72,8 +73,8 @@ rule filter_spanning_by_orientation:
         "outm=stdout.fq "
         "2>{log} "
         ## downstream
-        "| bbduk.sh "
-        "ordered "
+        "| bbduk.sh ordered=t "
+        "{params.default} "
         "{params.extra} "
         "k={params.k_downstream} "
         "edist={params.mismatches} "
@@ -133,6 +134,7 @@ rule bbduk_filtering_and_cutadapt_trimming:
         flanking_region_upstream=config["flanking_region"]["upstream"],
         flanking_region_downstream=config["flanking_region"]["downstream"],
         to_forward_strand=lambda wildcards: "rcomp=t" if wildcards.orientation=="RR" else "",
+        default=config["bbduk"]["default"] if config["bbduk"]["default"] else "",
     log:
         "{results}/{ref}/log/bbduk_filtering_and_cutadapt_trimming.{sample}.{orientation}.log"
     conda:
@@ -142,6 +144,7 @@ rule bbduk_filtering_and_cutadapt_trimming:
     shell:
         ## 1) reverse complement (to forward strand) if RR
         "reformat.sh "
+        "{params.default} "
         "{params.to_forward_strand} "
         "in={input.fastq} "
         "out=stdout.fq "
@@ -154,6 +157,7 @@ rule bbduk_filtering_and_cutadapt_trimming:
         "2>>{log} "
         ## 4) remove ambiguous reads (from blacklist) that have valid flanking regions in FF and RR orientation
         "| filterbyname.sh "
+        "{params.default} "
         "include=f " # exclude
         "names={input.blacklist} "
         "in=stdin.fq "
@@ -162,7 +166,7 @@ rule bbduk_filtering_and_cutadapt_trimming:
         "2>>{log} "
         ## 5) to fastq (no changes)
         "| reformat.sh "
-        "t={threads} "
+        "{params.default} "
         "in=stdin.fq "
         "int=f " # no interleaving for unpaired
         "out={output} "
@@ -182,6 +186,7 @@ rule bbduk_concat_and_fix_strand:
     log:
         "{results}/{ref}/log/bbduk_concat_and_fix_strand.{sample}.log"
     params:
+        default=config["bbduk"]["default"] if config["bbduk"]["default"] else "",
         extra="", #"-Xmx1G"
         reverse_complement="rcomp=t" if config["reverse_complement"] else "",
     conda:
@@ -189,6 +194,7 @@ rule bbduk_concat_and_fix_strand:
     shell:
         "zcat {input} "
         "| reformat.sh "
+        "{params.default} "
         "{params.extra} "
         "{params.reverse_complement} "
         "in=stdin.fq "
@@ -215,6 +221,7 @@ rule repeat_region_spanning_filter_repeats2:
     output:
         "{results}/{ref}/repeat_region_spanning/no_flanking/{filter_repeats}/{sample}.fastq.gz"
     params:
+        default=config["bbduk"]["default"] if config["bbduk"]["default"] else "",
         extra="mm=f rcomp=f",
         k=lambda wildcards: len(wildcards.filter_repeats.replace("_absent", "")),
         seq=lambda wildcards: wildcards.filter_repeats if not wildcards.filter_repeats.endswith("_absent") else wildcards.filter_repeats.replace("_absent", ""),
@@ -226,9 +233,8 @@ rule repeat_region_spanning_filter_repeats2:
     threads:
         4
     shell:
-        "bbduk.sh "
-        "ordered "
-        "t={threads} "
+        "bbduk.sh ordered=t "
+        "{params.default} "
         "{params.extra} "
         "k={params.k} "
         "edist=0 "

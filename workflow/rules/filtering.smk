@@ -6,15 +6,18 @@ rule bbduk_filtering:
     output:
         "{results}/{ref}/filtering/bbduk/{sample}.fastq.gz"
     params:
-        extra=config["bbduk"] if config["bbduk"] else ""
+        default=config["bbduk"]["default"] if config["bbduk"]["default"] else "",
+        filtering=config["bbduk"]["filtering"] if config["bbduk"]["filtering"] else ""
     log:
         "{results}/{ref}/log/filtering_bbduk.{sample}.log"
     conda:
         "../envs/bbmap.yaml"
+    threads:
+        4
     shell:
-        "bbduk.sh "
-        "ordered "
-        "{params.extra} "
+        "bbduk.sh ordered=t "
+        "{params.default} "
+        "{params.filtering} "
         "in={input} "
         "out={output} "
         ">{log} 2>&1 "

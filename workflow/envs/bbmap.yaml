@@ -5,3 +5,4 @@ channels:
 dependencies:
   - bbmap =39.01
   - python
+  - pigz =2.8

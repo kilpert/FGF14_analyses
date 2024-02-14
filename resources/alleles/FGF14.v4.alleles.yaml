@@ -1,0 +1,1294 @@
+FGF14_45618:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGG:
+        n: 1
+FGF14_45631:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAGAAAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAGAAG:
+        n: 1
+FGF14_79607:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_80329:
+  allele_1:
+    include:
+      CTTTCTGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+FGF14_80330:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAAGAAGAAAGAAGAAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGAAGAAGAAGAAGAAAG:
+        n: 1
+FGF14_80331:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGGAAG:
+        n: 1
+FGF14_80332:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAGAAGA:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+FGF14_80357:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_80431:
+  allele_1:
+    include:
+      CTTTCTGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+FGF14_80545:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGGAAG:
+        n: 1
+FGF14_80548:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 199 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGA:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 200 # <----------------------------- Modification!
+FGF14_80689:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGGAAG:
+        n: 1
+FGF14_80920:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_80996:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_81356:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_81456:
+  allele_1:
+    include:
+      CTTTCTGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+FGF14_81457:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_82415:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGGGAAG:
+        n: 1
+  allele_3:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_82898:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 199 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 200 # <----------------------------- Modification!
+FGF14_83637:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_83825:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAGAAGA:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+FGF14_84267:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_84415:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_86967:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGAGAAG:
+        n: 1
+FGF14_87668:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_87859:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAGACG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGA:
+        n: 1
+FGF14_88489:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_88619:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_89829:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGA:
+        n: 1
+FGF14_90120:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_90982:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_91143:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_91231:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_91410:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGA:
+        n: 1
+FGF14_91412:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGA:
+        n: 1
+FGF14_91413:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGA:
+        n: 1
+FGF14_91423:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_91439:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAAGAAGAAAGAAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 199 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 200 # <----------------------------- Modification!
+FGF14_91440:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAAGAAGAAAGAAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 199 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 200 # <----------------------------- Modification!
+FGF14_92042:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGGGAAG:
+        n: 1
+FGF14_92794:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_93354:
+  allele_1:
+    include:
+      CTTTCTGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+FGF14_93578:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_93580:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_95081:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_95289:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_95404:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_95405:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_95406:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_95407:
+  allele_1:
+    include:
+      CTTTCTGTGGAAGAAGAAGAAGAAGAAGAAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAGAAGGAG:
+        n: 1
+FGF14_95408:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+      AACAAG: # <----------------------------- Modification!
+        n: 2 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    exclude: # <----------------------------- Modification!
+      AACAAG: # <----------------------------- Modification!
+        n: 1 # <----------------------------- Modification!
+FGF14_95411:
+  allele_1:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTTAGTCATAGTACCAG:
+        n: 1
+FGF14_95412:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTTAGTCATAGTACCAG:
+        n: 1
+FGF14_95716:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAGAA:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+FGF14_96397:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_96642:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGGGAAG:
+        n: 1
+FGF14_96642_run7:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGGGAAG:
+        n: 1
+FGF14_96652:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 699 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGA:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 700 # <----------------------------- Modification!
+FGF14_96701:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+      AGGAGGAGGA: # <----------------------------- Modification!
+        n: 1 # <----------------------------- Modification!
+    read: # <----------------------------- Modification!
+      maxlen: 199 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    exclude: # <----------------------------- Modification!
+      AGGAGGAGGA: # <----------------------------- Modification!
+        n: 1 # <----------------------------- Modification!
+    read: # <----------------------------- Modification!
+      minlen: 200 # <----------------------------- Modification!
+FGF14_96714:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_96715:
+  allele_1:
+    include:
+      CTTTCTGTGGAAGAAGAAGAAGAAGAAGAAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 199 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 200 # <----------------------------- Modification!
+FGF14_97038:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_97526:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAAGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAAAG:
+        n: 1
+FGF14_97638:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 749 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 750 # <----------------------------- Modification!
+FGF14_97787:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_97791:
+  allele_1:
+    include:
+      CTTTCTGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+FGF14_97799:
+  allele_1:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGGAAG:
+        n: 1
+FGF14_97800:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGG:
+        n: 1
+FGF14_98072:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_98270:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_98343:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_990099:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_990418:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+  # allele_2: # <----------------------------- Modification!
+  #   include: # <----------------------------- Modification!
+  #     CTTTCTGTG: # <----------------------------- Modification!
+  #       n: 1 # <----------------------------- Modification!
+FGF14_990658:
+  allele_1:
+    include:
+      CTTTCTGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+FGF14_990667:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAGAG:
+        n: 1
+FGF14_990789:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+FGF14_990808:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_990832:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAG:
+        n: 1
+FGF14_990843:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAGAAGAAGAAGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAGAAGGAGAAGGAG:
+        n: 1
+FGF14_991065:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_991234:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+FGF14_991423:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_991437:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_991699:
+  allele_1:
+    include:
+      CTTTCTGAGAAGAAGAAGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGAGAAGAAGAGGAAG:
+        n: 1
+FGF14_991887:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+FGF14_992073:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_992102:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 349 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 350 # <----------------------------- Modification!
+FGF14_992356:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAAAG:
+        n: 1
+FGF14_992712:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_992745:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAGAAGAAAGAAGAAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAAAGAAGAAGAAAG:
+        n: 1
+FGF14_992749:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_992974:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 499 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 500 # <----------------------------- Modification!
+FGF14_993150:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTAAGAAG:
+        n: 1
+FGF14_993649:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAA:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAG:
+        n: 1
+FGF14_993690:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_993743:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAGAAAAGAAGA:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAGAAGAAGGAG:
+        n: 1
+FGF14_994109:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_994326:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 449 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 450 # <----------------------------- Modification!
+FGF14_994434:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_994752:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_994955:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_994991:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_994994:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+FGF14_995498:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAA:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAG:
+        n: 1
+FGF14_995602:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_995731:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_996151:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_996612:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+FGF14_996698:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_996722:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGAGAAGAAG:
+        n: 1
+FGF14_996889:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGAGAAGAAG:
+        n: 1
+FGF14_996918:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+FGF14_996956:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_997022:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_997633:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_997817:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+  allele_3:
+    include:
+      CTTTCTGTGAAGAAGAAGAAGAAGGAG:
+        n: 1
+FGF14_998125:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAG:
+        n: 1
+FGF14_998171:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGAGAAGAAG:
+        n: 1
+FGF14_998201:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_998295:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAG:
+        n: 1
+FGF14_998326:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+FGF14_998535:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_998552:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_998557:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_998668:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_998750:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAAGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+FGF14_998780:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_998795:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAG:
+        n: 1
+FGF14_998894:
+  allele_1:
+    include:
+      CTTTCTGAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+FGF14_998895:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_999007:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGGAAGAAG:
+        n: 1
+FGF14_999161:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_999197:
+  allele_1:
+    include:
+      CTTTCTGTTAGTCATAGTACCCC:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+FGF14_87909:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 249 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTGAAGAAAG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 250 # <----------------------------- Modification!
+FGF14_97062:
+  allele_1:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      maxlen: 199 # <----------------------------- Modification!
+  allele_2:
+    include:
+      CTTTCTGTG:
+        n: 1
+    read: # <----------------------------- Modification!
+      minlen: 200 # <----------------------------- Modification!
+FGF14_98902:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAG:
+        n: 1

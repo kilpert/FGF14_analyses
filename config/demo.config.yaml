@@ -1,0 +1,60 @@
+########################################################################################################################
+## Demo Example FGF14
+########################################################################################################################
+
+fastq_dir: demo/input
+results: demo/output
+
+whitelist:
+  - demo
+
+########################################################################################################################
+## FGF14 settings
+########################################################################################################################
+
+motifs:
+  - AAG
+  - GAG
+  - AGG
+  - ACG
+  - AAC
+
+filter_repeats:
+  - AAGAAG
+  - AAGAAG_absent
+
+## reverse_complement: True # FGF14 on -strand!
+
+flanking_region:
+  upstream:   ATATCAATATTCTCTATGCAACCAA # 25 bp, upstream_flanking_region, 13:102161532-102161557  # rc: TTGGTTGCATAGAGAATATTGATAT
+  downstream: TAGAAATGTGTTTAAGAATTCCTCA # 25 bp, downstream_flanking_region 13:102161726-102161751 # rc: TGAGGAATTCTTAAACACATTTCTA
+
+motif_colors:
+  AAG: "#5ca2d5"  # blue
+  GAG: "yellow"
+  AGG: "red"
+  ACG: "brown"
+  AAC: "pink"
+  other: "black"
+
+alleles_yaml: demo/demo.alleles.yaml
+
+
+#########################################################################################################################
+## general configuration
+#########################################################################################################################
+
+verbose: True
+
+
+## tools
+
+fastqc:
+  adapters: resources/ont/ont_adapters.fastqc.tsv
+
+bbduk:
+  default: t=4 pigz=t unpigz=t
+  filtering: -Xmx2g qin=33 minlen=200 qtrim=lr trimq=10 maq=10 maxlen=100000
+
+repeat_region_spanning:
+  edit_distance: 2

@@ -1,0 +1,9 @@
+demo:
+  allele_1:
+    include:
+      CTTTCTGTGAAGAAGAAG:
+        n: 1
+  allele_2:
+    include:
+      CTTTCTGTGAAGAGAAGG:
+        n: 1

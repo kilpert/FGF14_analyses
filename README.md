@@ -33,6 +33,7 @@ The workflow was tesed on:
 
  - Ubuntu 22.04.2 LTS
  - conda 23.3.1
+ - mamba 1.4.2
  - biopython 1.81
  - Snakemake 7.32.4
 

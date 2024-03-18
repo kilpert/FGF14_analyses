@@ -5,9 +5,6 @@ This [Snakemake](https://github.com/snakemake/snakemake) workflow performs the a
 ## Input
 The workflow needs fastq.gz files as input. It was tested on fastq files generated from the [FGF14 basecalling](https://github.com/kilpert/FGF14_basecalling) workflow, but this is no requirement.
 
-## Prerequisits
-The workflow needs the [Biopyton](https://biopython.org/) library for computing the reverse complement of sequences. Install it beforehand, e.g. in a conda environment, so that it is available when running the workflow.
-
 ## Starting the workflow
 The workflow can be started by running the `run.sh` on the shell 
 

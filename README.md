@@ -9,7 +9,36 @@ The workflow needs fastq.gz files as input. It was tested on fastq files generat
 The workflow needs the [Biopyton](https://biopython.org/) library for computing the reverse complement of sequences. Install it beforehand, e.g. in a conda environment, so that it is available when running the workflow.
 
 ## Starting the workflow
-The workflow can be started by running the `run.sh` on the shell.
+The workflow can be started by running the `run.sh` on the shell 
+
+### or
+
+by executing the Snakemake command directly:
+
+```
+snakemake --cores --use-conda --conda-frontend mamba -p --rerun-incomplete
+```
+
+## Demo
+
+A demo dataset (`demo/input/demo.fastq.gz`, 10 reads only) is provided. It can be used for testing the workflow. The run time is about 15s.
+
+Run the workflow on the demo data:
+
+```
+snakemake --cores --use-conda --conda-frontend mamba -p --rerun-incomplete --configfile config/demo.config.yaml
+```
+
+The demo output will be saved to the `demo/output` folder as specified in the `demo/demo.config.yaml`.
+
+## Software versions
+The workflow was tesed on:
+
+ - Ubuntu 22.04.2 LTS
+ - conda 23.3.1
+ - biopython 1.81
+ - Snakemake 7.32.4
+
 
 ## Publication
 

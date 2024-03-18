@@ -3,15 +3,18 @@
 This [Snakemake](https://github.com/snakemake/snakemake) workflow performs the anlysis of long read (Nanopore) repeat sequence data. It calculates statistics and generates plots (custom Python and R scripts) to characterize the nature of the repeat expansion in length and motif composition. Specific alleles (length and motif) can be defined manually for enhanced visualization. 
 
 
-## Input
-The workflow needs fastq.gz files as input. It was tested on fastq files generated from the [FGF14 basecalling](https://github.com/kilpert/FGF14_basecalling) workflow, but this is no requirement.
-
-
-## Installation guide
-
-Install from Github:
+## Install from Github
 
 `git clone https://github.com/kilpert/FGF14_analyses.git`
+
+
+## Setup (Configuration)
+
+The workflow needs **fastq.gz** files as input. It was tested on fastq files generated from the [FGF14 basecalling](https://github.com/kilpert/FGF14_basecalling) workflow, but this is no requirement.
+
+The path to the folder holding the fastq.gz files has to be configured in the `config/config.yaml` file, e.g.:
+
+`fastq_dir: path/to/fastq`
 
 
 ## Starting the workflow

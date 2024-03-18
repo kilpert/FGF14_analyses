@@ -31,7 +31,7 @@ snakemake --cores --use-conda --conda-frontend mamba -p --rerun-incomplete --con
 
 The demo output will be saved to the `demo/output` folder as specified in the `demo/demo.config.yaml`.
 
-## Software versions
+## System requirements
 The workflow was tesed on:
 
  - Ubuntu 22.04.2 LTS

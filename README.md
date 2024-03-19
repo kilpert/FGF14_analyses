@@ -3,6 +3,13 @@
 This [Snakemake](https://github.com/snakemake/snakemake) workflow performs the anlysis of long read (Nanopore) repeat sequence data. It calculates statistics and generates plots (custom Python and R scripts) to characterize the nature of the repeat expansion in length and motif composition. Specific alleles (length and motif) can be defined manually for enhanced visualization. 
 
 
+## How it works
+
+This software is basically a Snakemake workflow that starts with fastq files and runs several known tools in order to analyze reads that cover repeat expansions. It was used in our publication to understand repeat expansions in human *FGF14*, but it can also be used on other regions of the genome. Long read technology (e.g. Nanopore) is particularly suited for this kind of analysis. 
+
+In its core, this workflow – beside doing quality filtering (bbduk) and running some default QC tools – identifies reads with specific regions of interest by their upstream and downstream flanking sequences (also using bbduk). We refer to them as *repeat spanning reads*. They are the subject to further analyzes steps. The user can specifiy  repeat motifs which are visualized in several ways, i.e. the exact locations of the motifs are determined and visualized in graphs (custom scripts). The user can further specify alleles by indicating nucleotide sequences in a yaml file that have to be included or excluded.
+
+
 ## Install from Github
 
 `git clone https://github.com/kilpert/FGF14_analyses.git`

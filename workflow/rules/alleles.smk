@@ -79,7 +79,9 @@ rule alleles_motif_positions_plots:
         json_str=lambda wildcards: json.dumps({
             "colors": config["motif_colors"], 
             "subsample": 300,
-            ##"subsample_total": 500,
+            "width": 600,
+            "x_range": [0, 1800],
+            "x_tickvals": list(range(0, 2000, 500)),
             "sample":{
                 wildcards.sample:{
                     "alleles": config["alleles"][wildcards.sample]

@@ -43,7 +43,6 @@ try:
 except:
     user_colors_dict = None
 
-
 try:
     sample_name = list(config["sample"].keys())[0]
 except:
@@ -53,6 +52,26 @@ try:
     d_alleles = config["sample"][sample_name]["alleles"]
 except:
     d_alleles = {}
+
+try:
+    width = config["width"]
+except:
+    width = None
+
+try:
+    x_range = config["x_range"]
+except:
+    x_range = None
+
+try:
+    x_tickvals = config["x_tickvals"]
+except:
+    x_tickvals = None
+
+try:
+    y_tickvals = config["y_tickvals"]
+except:
+    y_tickvals = None
 
 
 ## Path from json_str
@@ -453,10 +472,21 @@ fig.update_layout(
     bargap=0,
     title = f"{sample_name}<br><sup>{d_figinfo['total']['n_reads']} reads (total)</sup>",
     title_x=0.5,
-    width=500*len(d_figinfo["alleles"].keys()),
-    height=300+len(df_dict)*2,
+    width=width*len(d_figinfo["alleles"].keys()),
+    height=200+len(df_dict)*3,
     ##height=1000,
 )
+
+if "x_range" in config:
+    fig.update_xaxes(range=[config["x_range"][0], config["x_range"][1]])
+
+if "x_tickvals" in config:
+    print("x_tickvals:", x_tickvals)
+    fig.update_xaxes(
+        tickmode = 'array',
+        tickvals = x_tickvals
+    )
+    
 fig.update_traces(width=1)
 fig.update_yaxes(showticklabels=False)
 fig.update_layout(margin=dict(t=130))

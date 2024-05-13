@@ -197,6 +197,7 @@ motifs:
   - AGG
   - ACG
   - AAC
+  - AAGGAGAAGGAG
 
 filter_repeats:
   - AAGAAG
@@ -212,8 +213,9 @@ motif_colors:
   AAG: "#5ca2d5"  # blue
   GAG: "yellow"
   AGG: "red"
-  ACG: "brown"
+  ACG: "green"
   AAC: "pink"
+  AAGGAGAAGGAG: "orange"
   other: "black"
 
 alleles_yaml: resources/alleles/FGF14.v4.alleles.yaml

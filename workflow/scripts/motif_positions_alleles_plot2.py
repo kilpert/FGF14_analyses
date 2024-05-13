@@ -481,7 +481,6 @@ if "x_range" in config:
     fig.update_xaxes(range=[config["x_range"][0], config["x_range"][1]])
 
 if "x_tickvals" in config:
-    print("x_tickvals:", x_tickvals)
     fig.update_xaxes(
         tickmode = 'array',
         tickvals = x_tickvals

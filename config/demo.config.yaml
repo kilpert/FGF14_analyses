@@ -5,8 +5,8 @@
 fastq_dir: demo/input
 results: demo/output
 
-whitelist:
-  - demo
+# whitelist:
+#   - demo
 
 ########################################################################################################################
 ## FGF14 settings

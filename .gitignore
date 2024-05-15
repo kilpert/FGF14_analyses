@@ -5,3 +5,5 @@ Rplots.pdf
 resources/alleles/*.alleles.yaml
 input/
 demo/output/
+test*/
+**.bak/

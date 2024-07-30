@@ -7,3 +7,4 @@ input/
 demo/output/
 test*/
 **.bak/
+**.fuse*

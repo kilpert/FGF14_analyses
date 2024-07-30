@@ -9,10 +9,10 @@ import yaml
 
 
 ## 1st level of config variable definition: config.yaml ################################################################
-## try:
-##     configfile: "config/config.yaml"
-## except:
-##     pass
+try:
+    configfile: "config/FGF14.config.yaml"
+except:
+    pass
 
 
 ## 2nd level of config variable definition: snakemake command line args (overwrites previous definitions) ##############
@@ -59,6 +59,9 @@ try:
     config["filter_repeats"]
 except:
     config["filter_repeats"] = []
+
+
+print(config)
 
 
 try:

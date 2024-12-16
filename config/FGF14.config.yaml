@@ -192,68 +192,95 @@
 ## FGF14__region_of_interest_for_IGV__hg38 (13:102161316-102161992)
 #########################################################################################################################
 
-fastq_dir: input/run014_20240515_FGF14_MARCH6_NAA_DAB_AFF.sup.fastq
-results: results/run014_20240515_FGF14_MARCH6_NAA_DAB_AFF_new/ont-guppy_6.4.6/sup
+# fastq_dir: input/run014_20240515_FGF14_MARCH6_NAA_DAB_AFF.sup.fastq
+# results: results/run014_20240515_FGF14_MARCH6_NAA_DAB_AFF_new/ont-guppy_6.4.6/sup
+
+# whitelist:
+#   # - AFF2_Ctrl_IP
+#   # - AFF2_c0001T_aunt
+#   # - AFF2_c0001_pt
+#   # - AFF2_c0001b_mother
+#   # - DAB1_100505
+
+#   # - FGF14_100148
+#   # - FGF14_100389
+#   # - FGF14_100781
+#   # - FGF14_100782
+
+#   - FGF14_101502 # no allele
+#   - FGF14_101503 # no allele
+#   # - FGF14_101504 # no allele
+#   # - FGF14_101505 # no allele
+#   # - FGF14_101507 # no allele
+#   # - FGF14_101508 # no allele
+#   # - FGF14_101510 # no allele
+#   # - FGF14_101511 # no allele
+#   # - FGF14_101512 # no allele
+#   # - FGF14_101513 # no allele
+#   # - FGF14_101514 # no allele
+#   # - FGF14_101515 # no allele
+#   # - FGF14_101516 # no allele
+#   # - FGF14_101518 # no allele
+#   # - FGF14_101519 # no allele
+#   # - FGF14_101520 # no allele
+#   # - FGF14_101521 # no allele
+#   # - FGF14_101522 # no allele
+#   # - FGF14_101523 # no allele
+#   # - FGF14_101524 # no allele
+#   # - FGF14_101604 # no allele
+#   # - FGF14_101605 # no allele
+#   # - FGF14_101606 # no allele
+#   # - FGF14_101607 # no allele
+
+# #   - FGF14_101765
+# #   - FGF14_101766
+# #   - FGF14_101767
+# #   - FGF14_84415
+# #   - FGF14_96859
+# #   - FGF14_99310
+# #   - FGF14_99439
+# #   - FGF14_99599
+
+# #   ## - MARCHF6_100949
+# #   ## - MARCHF6_100950
+# #   ## - MARCHF6_101921
+# #   ## - MARCHF6_101924
+# #   ## - MARCHF6_97368
+# #   ## - NAA10_F_R1_100767
+# #   ## - NAA10_F_R1_55042
+# #   ## - NAA10_F_R1_55043
+# #   ## - NAA10_F_R1_95716
+# #   ## - NAA10_F_R2_100767
+# #   ## - NAA10_F_R2_55042
+# #   ## - NAA10_F_R2_55043
+# #   ## - NAA10_F_R2_95716
+
+#########################################################################################################################
+## run015_20241203_FGF14_RFC1_MARCHF6
+## FGF14__region_of_interest_for_IGV__hg38 (13:102161316-102161992)
+#########################################################################################################################
+
+fastq_dir: /projects/humgen/science/depienne/fame3/minion_basecalling/results.FAME3-2/run015/dorado_0.8.3/SUP/fastq
+results: results.run015/FGF14
 
 whitelist:
-  # - AFF2_Ctrl_IP
-  # - AFF2_c0001T_aunt
-  # - AFF2_c0001_pt
-  # - AFF2_c0001b_mother
-  # - DAB1_100505
-
-  # - FGF14_100148
-  # - FGF14_100389
-  # - FGF14_100781
-  # - FGF14_100782
-
-  - FGF14_101502 # no allele
-  - FGF14_101503 # no allele
-  # - FGF14_101504 # no allele
-  # - FGF14_101505 # no allele
-  # - FGF14_101507 # no allele
-  # - FGF14_101508 # no allele
-  # - FGF14_101510 # no allele
-  # - FGF14_101511 # no allele
-  # - FGF14_101512 # no allele
-  # - FGF14_101513 # no allele
-  # - FGF14_101514 # no allele
-  # - FGF14_101515 # no allele
-  # - FGF14_101516 # no allele
-  # - FGF14_101518 # no allele
-  # - FGF14_101519 # no allele
-  # - FGF14_101520 # no allele
-  # - FGF14_101521 # no allele
-  # - FGF14_101522 # no allele
-  # - FGF14_101523 # no allele
-  # - FGF14_101524 # no allele
-  # - FGF14_101604 # no allele
-  # - FGF14_101605 # no allele
-  # - FGF14_101606 # no allele
-  # - FGF14_101607 # no allele
-
-#   - FGF14_101765
-#   - FGF14_101766
-#   - FGF14_101767
-#   - FGF14_84415
-#   - FGF14_96859
-#   - FGF14_99310
-#   - FGF14_99439
-#   - FGF14_99599
-
-#   ## - MARCHF6_100949
-#   ## - MARCHF6_100950
-#   ## - MARCHF6_101921
-#   ## - MARCHF6_101924
-#   ## - MARCHF6_97368
-#   ## - NAA10_F_R1_100767
-#   ## - NAA10_F_R1_55042
-#   ## - NAA10_F_R1_55043
-#   ## - NAA10_F_R1_95716
-#   ## - NAA10_F_R2_100767
-#   ## - NAA10_F_R2_55042
-#   ## - NAA10_F_R2_55043
-#   ## - NAA10_F_R2_95716
+  - FGF14_M103127
+  - FGF14_M103626
+  - FGF14_M103627
+  - FGF14_M103628
+  - FGF14_M103629
+  - FGF14_M103630
+  - FGF14_M103631
+  - FGF14_M103632
+  - FGF14_M103633
+  - FGF14_M103634
+  - FGF14_M103635
+  - FGF14_M103636
+  - FGF14_M103910
+  - FGF14_M103977
+  - FGF14_M104071
+  - FGF14_M104137
+  - FGF14_M104389
 
 
 ########################################################################################################################
@@ -285,7 +312,7 @@ motif_colors:
   AAC: "pink"
   other: "black"
 
-alleles_yaml: resources/alleles/FGF14.v5.alleles.yaml
+alleles_yaml: resources/alleles/FGF14.v6.alleles.yaml
 
 
 #########################################################################################################################

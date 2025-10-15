@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-snakemake --use-conda -p --rerun-incomplete --profile debug #--rerun-trigger mtime
+snakemake --cores 32 --use-conda -p --rerun-incomplete --profile humgen #--rerun-trigger mtime
 

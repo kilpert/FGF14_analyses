@@ -260,27 +260,60 @@
 ## FGF14__region_of_interest_for_IGV__hg38 (13:102161316-102161992)
 #########################################################################################################################
 
-fastq_dir: /projects/humgen/science/depienne/fame3/minion_basecalling/results.FAME3-2/run015/dorado_0.8.3/SUP/fastq
-results: results.run015/FGF14
+# fastq_dir: /projects/humgen/science/depienne/fame3/minion_basecalling/results.FAME3-2/run015/dorado_0.8.3/SUP/fastq
+# results: results.run015/FGF14
+
+# whitelist:
+#   - FGF14_M103127
+#   - FGF14_M103626
+#   - FGF14_M103627
+#   - FGF14_M103628
+#   - FGF14_M103629
+#   - FGF14_M103630
+#   - FGF14_M103631
+#   - FGF14_M103632
+#   - FGF14_M103633
+#   - FGF14_M103634
+#   - FGF14_M103635
+#   - FGF14_M103636
+#   - FGF14_M103910
+#   - FGF14_M103977
+#   - FGF14_M104071
+#   - FGF14_M104137
+#   - FGF14_M104389
+
+
+#########################################################################################################################
+## run016
+## FGF14__region_of_interest_for_IGV__hg38 (13:102161316-102161992)
+#########################################################################################################################
+
+fastq_dir: /projects/humgen/science/depienne/fame3/minion_basecalling/results/2025-10-10/run016/dorado_1.1.1_duplex/sup/fastq
+results: results.run016/FGF14/dorado_1.1.1_duplex.sup
 
 whitelist:
-  - FGF14_M103127
-  - FGF14_M103626
-  - FGF14_M103627
-  - FGF14_M103628
-  - FGF14_M103629
-  - FGF14_M103630
-  - FGF14_M103631
-  - FGF14_M103632
-  - FGF14_M103633
-  - FGF14_M103634
-  - FGF14_M103635
-  - FGF14_M103636
-  - FGF14_M103910
-  - FGF14_M103977
-  - FGF14_M104071
-  - FGF14_M104137
-  - FGF14_M104389
+  - run016_barcode01_FGF14_M104137
+  - run016_barcode02_FGF14_M103127
+  - run016_barcode04_FGF14_M98635
+  - run016_barcode05_FGF14_M108811
+  - run016_barcode06_FGF14_M108812
+  - run016_barcode07_FGF14_M108813
+  - run016_barcode08_FGF14_M108814
+  - run016_barcode09_FGF14_M108815
+  - run016_barcode10_FGF14_M108816
+  - run016_barcode11_FGF14_M108817
+  - run016_barcode12_FGF14_M108818
+  - run016_barcode13_FGF14_M108523
+  - run016_barcode14_FGF14_M108522
+  - run016_barcode15_FGF14_M104253
+  - run016_barcode16_FGF14_M104254
+  - run016_barcode17_FGF14_M97451
+  - run016_barcode18_FGF14_M105168
+  - run016_barcode19_FGF14_M98129
+  - run016_barcode20_FGF14_M99220
+  - run016_barcode21_FGF14_M100513
+  - run016_barcode22_FGF14_M101784
+  - run016_barcode23_FGF14_M102998
 
 
 ########################################################################################################################
@@ -312,7 +345,7 @@ motif_colors:
   AAC: "pink"
   other: "black"
 
-alleles_yaml: resources/alleles/FGF14.v6.alleles.yaml
+## alleles_yaml: resources/alleles/FGF14.v6.alleles.yaml
 
 
 #########################################################################################################################

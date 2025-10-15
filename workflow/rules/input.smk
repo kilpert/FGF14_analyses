@@ -55,6 +55,7 @@ rule input_fastqc:
     threads:
         4
     shell:
+        "export _JAVA_OPTIONS='-Xmx8g'; "
         "fastqc "
         "--threads {threads} "
         "{params.adapters} "

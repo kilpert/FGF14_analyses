@@ -37,6 +37,18 @@ except:
     user_colors_dict = None
 
 
+try:
+    downsample_n = config["downsample_n"]
+except:
+    downsample_n = 200
+
+
+try:
+    seed = config["seed"]
+except:
+    seed = 12345
+
+
 print("{:#^60}".format(f" config "))
 print(json.dumps(config, indent=4))
 
@@ -50,6 +62,7 @@ print("{:#^60}".format(f" df "))
 df = pd.read_csv(infile, sep="\t")
 df = df.sort_values(by=["repeat_bp"], ascending=False)
 ##print(tabulate(df, headers='keys'))
+print(df)
 
 
 ## Calculate motif lenghts in bp
@@ -69,8 +82,8 @@ for motif in [motif for motif in df_colnames if motif.endswith("_n")]:
 df["other_bp"] = df["repeat_bp"]
 for motif_bp in motif_bp_list:
     df["other_bp"] -= df[motif_bp]
-print(tabulate(df, headers='keys'))
-
+## print(tabulate(df, headers='keys'))
+print(df)
 
 
 ## Figures
@@ -82,28 +95,34 @@ print("{:#^60}".format(f" Histogram "))
 
 fig = px.histogram(df,
     x="repeat_bp",
-    nbins=100,
+    nbins=200,
     color="starts_with_first_motif",
     color_discrete_map={
        True: 'cadetblue',
        False: 'darksalmon'
     },
-    marginal="rug",
-    title=f"{sample_name} - Histogram of repeat lenghts (bp)<br><sup>n_reads={len(df)}, median_bp={df['repeat_bp'].median()}</sup>"
+    ## marginal="rug", # rug plot
+    title=f"{sample_name} - Histogram of repeat lenghts (bp)<br><sup>{len(df)} reads, median: {df['repeat_bp'].median()} bp</sup>"
 )
 ##fig.show()
 figures.append(fig)
 
 
-## Repeat region compositon bar plot
+## Repeat region compositon bar plot (NOT ACCURATE, DO NOT USE!!!)
 print("{:#^60}".format(f" Bar plot "))
 
 df_bp = df[['read_name'] + motif_bp_list + ['other_bp']]
+print("{:#^60}".format(f" df_bp "))
+
+print("{:#^60}".format(f" downsample (n={downsample_n}, seed={seed}) "))
+df_bp = df_bp.sample(n=downsample_n, random_state=seed) # downsample
+print(df_bp)
 
 df_bp_long = df_bp.melt(id_vars=["read_name"], var_name="Motif", value_name="bp")
 df_bp_long["Motif"] = df_bp_long["Motif"].str.replace("_bp", "") # remove "_bp" from variable
-print(tabulate(df_bp_long, headers='keys'))
-
+## print(tabulate(df_bp_long, headers='keys'))
+print("{:#^60}".format(f" df_bp_long "))
+print(df_bp_long)
 
 
 def get_colors(varnames, default_colors_list=px.colors.qualitative.G10, user_colors_dict=None, return_list=True):
@@ -138,7 +157,7 @@ fig = px.bar(df_bp_long,
              ##    'TACC': 'blue',
              ##    'other': 'black'
              ## },
-             title=f"{sample_name} - Repeat region composition<br><sup>n_reads={len(df)}, median_bp={df['repeat_bp'].median()}</sup>",
+             title=f"{sample_name} - Repeat region composition<br><sup>{len(df_bp)} (of {len(df)}) reads, median: {df['repeat_bp'].median()} bp</sup>",
 )
 ## fig.update_layout(
 ##     xaxis_title="Read name"

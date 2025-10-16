@@ -32,7 +32,7 @@ while True:
     ## vprint("3 - desc:", desc)
     ## vprint("4 - qual:", qual)
 
-    read_name = id.split(" ")[0][1:]
+    read_name = id.split()[0][1:]
     ## vprint("read_name:", read_name)
     if not read_name in reads_dict:
         reads_dict[read_name] = {}

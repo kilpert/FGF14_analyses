@@ -345,7 +345,7 @@ motif_colors:
   AAC: "pink"
   other: "black"
 
-## alleles_yaml: resources/alleles/FGF14.v6.alleles.yaml
+alleles_yaml: resources/alleles/FGF14.v7b.alleles.yaml
 
 
 #########################################################################################################################

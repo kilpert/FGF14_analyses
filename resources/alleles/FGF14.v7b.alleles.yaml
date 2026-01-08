@@ -1655,15 +1655,15 @@ FGF14_101607:
     include:
       CTTTCTGAGAAG:
         n: 1
-FGF14_M103127:
-  allele_1:
-    include:
-      CTTTCTGTTAGTCATAGTACCCC:
-        n: 1
-  allele_2:
-    include:
-      CTTTCTGTGAAG:
-        n: 1
+# FGF14_M103127:
+#   allele_1:
+#     include:
+#       CTTTCTGTTAGTCATAGTACCCC:
+#         n: 1
+#   allele_2:
+#     include:
+#       CTTTCTGTGAAG:
+#         n: 1
 FGF14_M103626:
   allele_1:
     include:
@@ -1806,15 +1806,15 @@ FGF14_M104071:
     include:
       CTTTCTGAGAAG:
         n: 1
-FGF14_M104137:
-  allele_1:
-    include:
-      CTTTCTGTTAGTCATAGTACCCC:
-        n: 1
-  allele_2:
-    include:
-      CTTTCTGAGAAG:
-        n: 1
+# FGF14_M104137:
+#   allele_1:
+#     include:
+#       CTTTCTGTTAGTCATAGTACCCC:
+#         n: 1
+#   allele_2:
+#     include:
+#       CTTTCTGAGAAG:
+#         n: 1
 FGF14_M104389:
   allele_1:
     include:
@@ -1828,7 +1828,7 @@ FGF14_M104389:
         n: 1
     read: # <----------------------------- Modification!
       minlen: 200 # <----------------------------- Modification!
-FGF14_M108811:
+run016_barcode05_FGF14_M108811:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1837,7 +1837,7 @@ FGF14_M108811:
     include:
       CTTTCTGTGAAG:
         n: 1
-FGF14_M108812:
+run016_barcode06_FGF14_M108812:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1846,7 +1846,7 @@ FGF14_M108812:
     include:
       CTTTCTGTGAAGAG:
         n: 1
-FGF14_M108813:
+run016_barcode07_FGF14_M108813:
   allele_1:
     include:
       CTTTCTGTGAAGAAG:
@@ -1855,7 +1855,7 @@ FGF14_M108813:
     include:
       CTTTCTGTGAAGAGAAG:
         n: 1
-FGF14_M108814:
+run016_barcode08_FGF14_M108814:
   allele_1:
     include:
       CTTTCTGAGAAG:
@@ -1864,7 +1864,7 @@ FGF14_M108814:
     include:
       CTTTCTGTGG:
         n: 1
-FGF14_M108815:
+run016_barcode09_FGF14_M108815:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1873,7 +1873,7 @@ FGF14_M108815:
     include:
       CTTTCTGTGAAGAG:
         n: 1
-FGF14_M108816:
+run016_barcode10_FGF14_M108816:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1882,7 +1882,7 @@ FGF14_M108816:
     include:
       CTTTCTGTGGAG:
         n: 1
-FGF14_M108817:
+run016_barcode11_FGF14_M108817:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1891,7 +1891,7 @@ FGF14_M108817:
     include:
       CTTTCTGTGAAG:
         n: 1
-FGF14_M108818:
+run016_barcode12_FGF14_M108818:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1900,7 +1900,7 @@ FGF14_M108818:
     include:
       CTTTCTGTGAAG:
         n: 1
-FGF14_M97451:
+run016_barcode17_FGF14_M97451:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1909,7 +1909,7 @@ FGF14_M97451:
     include:
       CTTTCTGTGAAG:
         n: 1
-FGF14_M98129:
+run016_barcode19_FGF14_M98129:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1918,7 +1918,7 @@ FGF14_M98129:
     include:
       CTTTCTGTGAAGAG:
         n: 1
-FGF14_M98635:
+run016_barcode04_FGF14_M98635:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1927,7 +1927,7 @@ FGF14_M98635:
     include:
       CTTTCTGTGAAGAG:
         n: 1
-FGF14_M99220:
+run016_barcode20_FGF14_M99220:
   allele_1:
     include:
       CTTTCTGTGAAGAAGAAGAAG:
@@ -1936,7 +1936,7 @@ FGF14_M99220:
     include:
       CTTTCTGTGAAGAAGAAGAAAAG:
         n: 1
-FGF14_M100513:
+run016_barcode21_FGF14_M100513:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1945,7 +1945,7 @@ FGF14_M100513:
     include:
       CTTTCTGTGAAGAG:
         n: 1
-FGF14_M101784:
+run016_barcode22_FGF14_M101784:
   allele_1:
     include:
       CTTTCTGTGAAGAAG:
@@ -1954,7 +1954,7 @@ FGF14_M101784:
     include:
       CTTTCTGAGAAGAAG:
         n: 1
-FGF14_M102998:
+run016_barcode23_FGF14_M102998:
   allele_1:
     include:
       CTTTCTGTGAAGAG:
@@ -1963,7 +1963,7 @@ FGF14_M102998:
     include:
       CTTTCTGAGAAGAAG:
         n: 1
-FGF14_M103127:
+run016_barcode02_FGF14_M103127:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1972,7 +1972,7 @@ FGF14_M103127:
     include:
       CTTTCTGTGAAGAAG:
         n: 1
-FGF14_M104137:
+run016_barcode01_FGF14_M104137:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1981,7 +1981,7 @@ FGF14_M104137:
     include:
       CTTTCTGAGAAGAAG:
         n: 1
-FGF14_M104253:
+run016_barcode15_FGF14_M104253:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1990,7 +1990,7 @@ FGF14_M104253:
     include:
       CTTTCTGTGAAGAAG:
         n: 1
-FGF14_M104254:
+run016_barcode16_FGF14_M104254:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -1999,7 +1999,7 @@ FGF14_M104254:
     include:
       CTTTCTGTGAAGAAG:
         n: 1
-FGF14_M105168:
+run016_barcode18_FGF14_M105168:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:
@@ -2008,7 +2008,7 @@ FGF14_M105168:
     include:
       CTTTCTGTGAAGAAG:
         n: 1
-FGF14_M108522:
+run016_barcode14_FGF14_M108522:
   allele_1:
     include:
       CTTTCTGAGAAGAAG:
@@ -2017,7 +2017,7 @@ FGF14_M108522:
     include:
       CTTTCTGTGAAGAG:
         n: 1
-FGF14_M108523:
+run016_barcode13_FGF14_M108523:
   allele_1:
     include:
       CTTTCTGTTAGTCATAGTACCCC:

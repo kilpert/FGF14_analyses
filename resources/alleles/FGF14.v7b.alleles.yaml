@@ -1880,7 +1880,7 @@ run016_barcode10_FGF14_M108816:
         n: 1
   allele_2:
     include:
-      CTTTCTGTGGAG:
+      CTTTCTGAGAAG:
         n: 1
 run016_barcode11_FGF14_M108817:
   allele_1:
